@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';  // Import useNavigate for navig
 import './HomePage.css';
 
 const HomePage = () => {
+
     const navigate = useNavigate(); // Create a navigate instance
 
     const handleExploreClick = () => {

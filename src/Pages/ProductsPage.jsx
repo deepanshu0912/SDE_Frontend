@@ -1,17 +1,40 @@
-// ProductsPage.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductsPage.css'; // Import the CSS file for styles
 
 const ProductsPage = () => {
-    // Sample product data (You may replace it with dynamic data)
-    const products = [
-        { id: 1, name: "Sofa", price: "₹85.00", image: "path/to/sofa.png", category: "Bestseller" },
-        { id: 2, name: "Rug", price: "₹25.00", image: "path/to/rug.png", category: "New" },
-        { id: 3, name: "Table", price: "₹35.00", image: "path/to/table.png", category: "New" },
-        { id: 4, name: "Lamp", price: "₹45.00", image: "path/to/lamp.png", category: "Bestseller" },
-        { id: 5, name: "Fur Rug", price: "₹55.00", image: "path/to/fur-rug.png", category: "New" },
-        { id: 6, name: "Pendant Light", price: "₹75.00", image: "path/to/pendant-light.png", category: "New" },
-    ];
+    const [products, setProducts] = useState([]); // State to store products
+    const [loading, setLoading] = useState(true); // State to manage loading state
+    const [error, setError] = useState(null); // State to manage error state
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch('http://localhost:8000/api/products'); // Your API endpoint
+                if (!response.ok) {
+                    throw new Error('Failed to fetch products');
+                }
+                const data = await response.json();
+                console.log(data);
+                setProducts(data); // Set the fetched data to the products state
+            } catch (err) {
+                setError(err.message); // Set the error message if fetching fails
+            } finally {
+                setLoading(false); // Set loading to false after fetching is complete
+            }
+        };
+
+        fetchProducts(); // Call the fetch function
+    }, []); // Empty dependency array means this effect runs once on mount
+
+    // Display loading message if data is being fetched
+    if (loading) {
+        return <div>Loading products...</div>;
+    }
+
+    // Display error message if fetching fails
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <div className="products-page">
@@ -24,7 +47,8 @@ const ProductsPage = () => {
                     <div className="product-card" key={product.id}>
                         <img src={product.image} alt={product.name} className="product-image" />
                         <h2 className="product-name">{product.name}</h2>
-                        <p className="product-price">{product.price}</p>
+                        <p className="product-price">₹{product.price}</p> {/* Assuming price is a number */}
+                        <p className="product-price">{product.phone_number}</p>
                         <span className="product-category">{product.category}</span>
                     </div>
                 ))}
