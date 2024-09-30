@@ -7,9 +7,10 @@ import ProductsPage from './Pages/ProductsPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
 import UploadPage from './Pages/UploadPage';
-import CartPage from './Pages/CartPage'; // Cart Page component
+import CartPage from './Pages/CartPage';
+import AccountPage from './Pages/AccountPage/AccountPage';
 import FeaturedProducts from './components/FeaturedProducts';
-import './styles/App.css';
+import './styles/App.css'; // Importing global styles
 
 const App = () => {
     return (
@@ -20,8 +21,9 @@ const App = () => {
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/products" element={<ProductsPage />} />
-                <Route path="/cart" element={<CartPage />} /> {/* Cart Page */}
+                <Route path="/cart" element={<CartPage />} />
                 <Route path="/upload" element={<UploadPage />} />
+                <Route path="/account" element={<AccountPage />} />
                 <Route path="/featured" element={<FeaturedProducts />} />
             </Routes>
             <Footer />

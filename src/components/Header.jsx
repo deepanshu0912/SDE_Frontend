@@ -1,4 +1,4 @@
-// Header.jsx
+// src/components/Header.jsx
 import React from 'react';
 import './Header.css';
 
@@ -14,6 +14,7 @@ const Header = () => {
                     <li><a href="/cart">Cart</a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
+                    <li><a href="/account">My Account</a></li> {/* New Account link */}
                 </ul>
             </nav>
         </header>

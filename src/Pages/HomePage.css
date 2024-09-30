@@ -5,34 +5,86 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height of the viewport */
-    background-color: #FAF7F0; /* Light background color */
+    background: linear-gradient(135deg, #F7F8FA 0%, #E9ECEF 100%); /* Soft gradient background */
     padding: 20px;
     text-align: center; /* Center align text */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
 .headline {
-    color: #4A4947; /* Dark gray for headline */
+    color: #FF6B6B; /* Vibrant Red for headline */
     font-size: 2.5rem; /* Larger font size for emphasis */
     margin-bottom: 10px;
+    animation: fadeIn 1s ease; /* Animation for headline */
 }
 
 .subheadline {
-    color: #B17457; /* Brown color for subheadline */
+    color: #4A4947; /* Dark Gray for subheadline */
     font-size: 1.2rem; /* Slightly smaller font for subheadline */
     margin-bottom: 20px;
+    animation: fadeIn 1.2s ease; /* Animation for subheadline */
 }
 
 .explore-button {
-    background-color: #B17457; /* Brown button */
-    color: #FAF7F0; /* Light background for button text */
-    padding: 10px 20px; /* Button padding */
+    background-color: #FFD93D; /* Bright Yellow button */
+    color: #4A4947; /* Dark Gray for button text */
+    padding: 15px 30px; /* Button padding */
     border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 8px; /* Rounded corners */
     font-size: 1rem; /* Button font size */
+    font-weight: bold; /* Bold text for emphasis */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+    position: relative; /* To enable inner element transitions */
+    overflow: hidden; /* Hide the animated ripple overflow */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Smooth transition for hover */
+}
+
+.explore-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 107, 107, 0.5); /* Light ripple color */
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+    pointer-events: none; /* Prevent ripple from affecting the button */
+}
+
+.explore-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .explore-button:hover {
-    background-color: #4A4947; /* Darker gray on hover */
+    background-color: #FFC107; /* Change to Amber on hover */
+    color: #FFFFFF; /* Change text color to white for better contrast */
+    transform: scale(1.05); /* Slight scaling for hover effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2rem; /* Adjust headline for smaller screens */
+    }
+    .subheadline {
+        font-size: 1rem; /* Adjust subheadline for smaller screens */
+    }
+    .explore-button {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 0.9rem; /* Slightly reduce button font size */
+    }
 }

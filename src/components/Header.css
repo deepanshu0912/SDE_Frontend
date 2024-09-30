@@ -1,43 +1,36 @@
-/* Header.css */
+/* src/components/Header.css */
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #E5C9A5; /* Light beige background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center vertically */
+    background-color: #FAF7F0; /* Light background */
+    padding: 10px 20px; /* Padding for top/bottom and left/right */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #4A4A4A; /* Dark gray */
+    font-size: 1.8rem; /* Logo font size */
+    color: #4A4947; /* Dark gray for logo */
 }
 
 .navigation ul {
     list-style: none; /* Remove bullet points */
-    display: flex;
-    gap: 20px; /* Space between menu items */
+    display: flex; /* Use flexbox for horizontal alignment */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navigation li {
+    margin-left: 20px; /* Space between menu items */
 }
 
 .navigation a {
-    text-decoration: none; /* Remove underline */
-    color: #4A4A4A; /* Dark gray */
-    font-weight: 500;
-    transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none; /* Remove underline from links */
+    color: #4A4947; /* Dark gray for links */
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 .navigation a:hover {
-    color: #716040; /* Darker brown on hover */
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack logo and nav on smaller screens */
-        align-items: flex-start;
-    }
-
-    .navigation {
-        margin-top: 10px;
-    }
+    color: #B17457; /* Change color on hover */
 }

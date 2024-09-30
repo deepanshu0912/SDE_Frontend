@@ -1,25 +1,47 @@
 /* Footer.css */
 .footer {
-    background-color: #c7b19e; /* Light brown background */
-    color: #fffffe; /* White text color */
+    background-color: #E2C94C; /* Softer yellow background */
+    color: #4A4947; /* Dark Gray text color for better contrast */
     padding: 20px; /* Padding for footer */
     text-align: center; /* Centered text */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Align to the bottom of the container */
+    width: 100%; /* Full width */
+}
+
+.footer:hover {
+    background-color: #D1B83E; /* Slightly darker on hover */
 }
 
 .footer p {
     margin: 5px 0; /* Margin for footer text */
     font-size: 0.9rem; /* Font size for footer text */
+    animation: fadeIn 0.5s ease; /* Animation for footer text */
 }
 
 .footer a {
-    color: #fffffe; /* White text for links */
+    color: #4A4947; /* Dark Gray for links */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color transition */
+    font-weight: bold; /* Make links bold */
 }
 
 .footer a:hover {
-    color: #5b4d3a; /* Change color on hover */
+    color: #FF6B6B; /* Change link color on hover to match the headline color */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive design */

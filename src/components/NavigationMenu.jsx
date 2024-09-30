@@ -1,20 +1,19 @@
+// src/components/NavigationMenu.jsx
 import React from 'react';
-import './NavigationMenu.css'; // Ensure the CSS file exists
+import { Link } from 'react-router-dom';
 
 const NavigationMenu = () => {
     return (
-        <nav className="navigation-menu">
+        <nav className="navigation">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/products">Products</Link></li>
+                <li><Link to="/upload">Upload</Link></li>
+                <li><Link to="/cart">Cart</Link></li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/register">Register</Link></li>
+                <li><Link to="/account">My Account</Link></li> {/* New Account link */}
             </ul>
-            <div className="featured-products">
-                <img src="/images/product1.jpg" alt="Featured Product 1" />
-                <img src="/images/product2.jpg" alt="Featured Product 2" />
-                <img src="/images/product3.jpg" alt="Featured Product 3" />
-            </div>
         </nav>
     );
 };

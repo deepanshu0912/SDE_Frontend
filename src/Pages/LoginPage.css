@@ -1,49 +1,45 @@
-/* LoginPage.css */
 .login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #FAF7F0; /* Light background color */
-    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    background-color: #f9f9f9; /* Light beige background color */
 }
 
 .headline {
-    color: #4A4947; /* Dark gray for headline */
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    color: #4b4b4b; /* Dark grey text color */
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    width: 300px; /* Form width */
-    background-color: #D8D2C2; /* Light beige background for the form */
-    padding: 20px; /* Padding inside the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Set a fixed width for the form */
+    padding: 2rem;
+    background: #eae4d1; /* Soft beige background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add some shadow */
 }
 
-.input-field {
-    padding: 10px; /* Input field padding */
-    margin-bottom: 15px; /* Space between input fields */
-    border: 1px solid #B17457; /* Border color for input fields */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Font size for input fields */
+.login-form input {
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px;
 }
 
-.login-button {
-    background-color: #B17457; /* Brown color for the button */
-    color: #FAF7F0; /* Light background for button text */
-    padding: 10px; /* Button padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Button font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+.login-form button {
+    padding: 10px;
+    background-color: #a69f8d; /* Beige color for button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.login-button:hover {
-    background-color: #4A4947; /* Darker gray on hover */
+.login-form button:hover {
+    background-color: #8e7b67; /* Darker shade on hover */
 }

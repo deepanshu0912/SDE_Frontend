@@ -1,6 +1,5 @@
-// LoginPage.jsx
 import React, { useState } from 'react';
-import './LoginPage.css';
+import './LoginPage.css'; // Import your CSS file
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -8,32 +7,29 @@ const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Logic to handle login goes here
-        console.log('Email:', email);
-        console.log('Password:', password);
+        // Handle login logic here
+        console.log('Logging in with:', { email, password });
     };
 
     return (
         <div className="login-page">
             <h1 className="headline">Welcome Back!</h1>
             <form className="login-form" onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    className="input-field"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
+                <input 
+                    type="email" 
+                    placeholder="Email" 
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required 
                 />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    className="input-field"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
+                <input 
+                    type="password" 
+                    placeholder="Password" 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    required 
                 />
-                <button type="submit" className="login-button">Login</button>
+                <button type="submit">Login</button>
             </form>
         </div>
     );

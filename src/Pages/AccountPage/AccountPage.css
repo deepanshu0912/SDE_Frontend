@@ -1,5 +1,5 @@
-/* ProductsPage.css */
-.products-page {
+/* src/Pages/AccountPage/AccountPage.css */
+.account-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,20 +7,45 @@
     padding: 20px;
 }
 
-.products-title {
+.account-title {
     color: #4A4947; /* Dark gray for title */
     font-size: 2.5rem; /* Title font size */
-    margin-bottom: 10px;
-}
-
-.products-description {
-    color: #B17457; /* Brown color for description */
-    font-size: 1.2rem; /* Description font size */
-    text-align: center;
     margin-bottom: 20px;
 }
 
-.products-grid {
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: white; /* White background for user info */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    width: 100%;
+    max-width: 800px; /* Limit the width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 30px; /* Space below user info */
+}
+
+.profile-pic {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.profile-pic img {
+    width: 80px; /* Profile image size */
+    height: 80px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular profile picture */
+}
+
+.user-details h2 {
+    color: #4A4947; /* Dark gray for username */
+}
+
+.uploaded-products-title {
+    color: #4A4947; /* Dark gray for section title */
+    font-size: 2rem; /* Section title font size */
+    margin-bottom: 10px; /* Space below section title */
+}
+
+.uploaded-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between grid items */
@@ -28,7 +53,7 @@
     max-width: 1200px; /* Limit the width */
 }
 
-.product-card {
+.uploaded-product-card {
     background-color: white; /* White background for product card */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -37,33 +62,23 @@
     transition: transform 0.2s; /* Smooth scaling on hover */
 }
 
-.product-card:hover {
+.uploaded-product-card:hover {
     transform: scale(1.05); /* Scale up on hover */
 }
 
-.product-image {
+.uploaded-product-image {
     width: 100%; /* Full width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for image */
 }
 
-.product-name {
+.uploaded-product-name {
     font-size: 1.2rem; /* Product name font size */
     color: #4A4947; /* Dark gray color */
     margin: 10px 0 5px 0; /* Margin adjustments */
 }
 
-.product-price {
+.uploaded-product-price {
     font-size: 1rem; /* Price font size */
     color: #B17457; /* Brown color for price */
-}
-
-.product-category {
-    display: inline-block; /* Inline for category */
-    padding: 5px 10px; /* Padding around category */
-    background-color: #B17457; /* Category background color */
-    color: white; /* Category text color */
-    border-radius: 20px; /* Rounded category badge */
-    font-size: 0.8rem; /* Smaller font size for category */
-    margin-top: 5px; /* Margin above */
 }
