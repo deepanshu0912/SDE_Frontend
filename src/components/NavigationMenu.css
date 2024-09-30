@@ -1,0 +1,32 @@
+.navigation-menu {
+    background-color: #fff; /* White background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.navigation-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    color: #333; /* Dark text */
+    font-weight: bold;
+}
+
+.featured-products {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.featured-products img {
+    width: 100px; /* Set appropriate width */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+}

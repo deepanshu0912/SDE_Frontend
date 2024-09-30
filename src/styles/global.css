@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #E5C9A5; /* Global sandy clay */
+  color: #4A4A4A; /* Slate gray for the whole app */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

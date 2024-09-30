@@ -1,0 +1,17 @@
+.card-element {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f4ef;
+    border: 1px solid #8c7851;
+    border-radius: 5px;
+  }
+  
+  .pay-button {
+    background-color: #8c7851;
+    color: #fffffe;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

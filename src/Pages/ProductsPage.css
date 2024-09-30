@@ -1,0 +1,15 @@
+/* ProductsPage.css */
+.remove-from-cart-button {
+    background-color: #C70000; /* Red color for remove button */
+    color: #FAF7F0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.remove-from-cart-button:hover {
+    background-color: #900000; /* Darker on hover */
+}

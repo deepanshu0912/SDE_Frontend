@@ -1,0 +1,43 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #E5C9A5; /* Light beige background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A4A4A; /* Dark gray */
+}
+
+.navigation ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+.navigation a {
+    text-decoration: none; /* Remove underline */
+    color: #4A4A4A; /* Dark gray */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navigation a:hover {
+    color: #716040; /* Darker brown on hover */
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack logo and nav on smaller screens */
+        align-items: flex-start;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+/* /src/App.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Light gray background */
+}
+
+.main-content {
+    margin-top: 80px; /* Space below the fixed header */
+    padding: 20px; /* Padding for main content */
+}
+
+/* Optionally, you can add more styles for specific pages here */

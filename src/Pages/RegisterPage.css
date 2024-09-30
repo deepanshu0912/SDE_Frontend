@@ -1,0 +1,49 @@
+/* RegisterPage.css */
+.register-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FAF7F0; /* Light background color */
+    padding: 20px;
+}
+
+.headline {
+    color: #4A4947; /* Dark gray for headline */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Form width */
+    background-color: #D8D2C2; /* Light beige background for the form */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.input-field {
+    padding: 10px; /* Input field padding */
+    margin-bottom: 15px; /* Space between input fields */
+    border: 1px solid #B17457; /* Border color for input fields */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for input fields */
+}
+
+.register-button {
+    background-color: #B17457; /* Brown color for the button */
+    color: #FAF7F0; /* Light background for button text */
+    padding: 10px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.register-button:hover {
+    background-color: #4A4947; /* Darker gray on hover */
+}

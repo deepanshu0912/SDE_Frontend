@@ -1,0 +1,51 @@
+/* ProductCard.css */
+.product-card {
+    background-color: #FAF7F0; /* Light background */
+    border: 1px solid #B17457; /* Brown border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s; /* Smooth hover effect */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.product-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Slightly rounded image */
+}
+
+.product-name {
+    font-size: 1.5rem; /* Larger font for product name */
+    color: #4A4947; /* Dark gray color */
+    margin: 10px 0; /* Space around name */
+}
+
+.product-description {
+    font-size: 1rem; /* Regular font size for description */
+    color: #4A4947; /* Dark gray color */
+}
+
+.product-price {
+    font-size: 1.2rem; /* Price font size */
+    color: #B17457; /* Brown color for price */
+    margin: 10px 0; /* Space around price */
+}
+
+.add-to-cart-button {
+    background-color: #B17457; /* Button color */
+    color: #FAF7F0; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-to-cart-button:hover {
+    background-color: #4A4947; /* Darker button on hover */
+}

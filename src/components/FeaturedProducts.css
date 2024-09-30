@@ -1,0 +1,27 @@
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-price {
+    color: green;
+}
